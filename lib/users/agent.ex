@@ -7,7 +7,7 @@ defmodule FlightBooking1.Users.Agent do
 
   def save(%User{} = user), do: Agent.update(__MODULE__, &update_state(&1, user))
 
-  def get(cpf), do: Agent.get(__MODULE__, &get_user(&1, cpf))
+  def get(user_id), do: Agent.get(__MODULE__, &get_user(&1, user_id))
 
   def get_all(), do: Agent.get(__MODULE__, fn user -> user end)
 
@@ -15,8 +15,8 @@ defmodule FlightBooking1.Users.Agent do
     Map.put(initial_state, cpf, user)
   end
 
-  defp get_user(state, cpf) do
-    case(Map.get(state, cpf)) do
+  defp get_user(state, user_id) do
+    case(Map.get(state, user_id)) do
       nil -> {:error, "User not found"}
       user -> {:ok, user}
     end
