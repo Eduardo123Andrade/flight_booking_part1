@@ -1,18 +1,10 @@
 defmodule FlightBooking1 do
-  @moduledoc """
-  Documentation for `FlightBooking1`.
-  """
+  alias FlightBooking1.Users.Agent, as: UserAgent
+  alias FlightBooking1.Users.CreateOrUpdate, as: CreateOrUpdateUser
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> FlightBooking1.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start_agents() do
+    UserAgent.start_link(%{})
   end
+
+  defdelegate create_or_update_user(params), to: CreateOrUpdateUser, as: :call
 end
