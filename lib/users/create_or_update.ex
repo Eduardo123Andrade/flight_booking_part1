@@ -3,7 +3,7 @@ defmodule FlightBooking1.Users.CreateOrUpdate do
   alias Users.Agent, as: UserAgent
   alias Users.User
 
-  def call(%User{cpf: cpf, email: email, name: name, id: _id}) do
+  def call(%User{cpf: cpf, email: email, name: name}) do
     name
     |> User.build(email, cpf)
     |> save_user()
@@ -13,6 +13,4 @@ defmodule FlightBooking1.Users.CreateOrUpdate do
     UserAgent.save(user)
     {:ok, "User created or updated successfully"}
   end
-
-  # defp save_user({:error, _reason} = error), do: error
 end
