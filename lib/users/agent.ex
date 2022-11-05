@@ -11,8 +11,8 @@ defmodule FlightBooking1.Users.Agent do
 
   def get_all(), do: Agent.get(__MODULE__, fn user -> user end)
 
-  defp update_state(initial_state, %User{cpf: cpf} = user) do
-    Map.put(initial_state, cpf, user)
+  defp update_state(initial_state, %User{id: id} = user) do
+    Map.put(initial_state, id, user)
   end
 
   defp get_user(state, user_id) do
