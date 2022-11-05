@@ -1,4 +1,4 @@
-defmodule FlightBooking1.User.AgentTest do
+defmodule FlightBooking1.Users.AgentTest do
   use ExUnit.Case
 
   import FlightBooking1.Factory
