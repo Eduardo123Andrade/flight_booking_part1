@@ -22,9 +22,7 @@ defmodule FlightBooking1.Bookings.Booking do
     create_booking(booking, compare)
   end
 
-  defp create_booking(%Booking{} = booking, compare) when compare == :gt,
-    do: {:ok, booking}
+  defp create_booking(%Booking{} = booking, compare) when compare == :gt, do: {:ok, booking}
 
-  defp create_booking(_, _),
-    do: {:error, "Invalid date"}
+  defp create_booking(_, _), do: {:error, "Invalid date"}
 end
