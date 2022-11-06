@@ -1,5 +1,5 @@
-defmodule FlightBooking1.Users.CreateOrUpdate do
-  alias FlightBooking1.Users
+defmodule FlightBooking.Users.CreateOrUpdate do
+  alias FlightBooking.Users
   alias Users.Agent, as: UserAgent
   alias Users.User
 

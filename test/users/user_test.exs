@@ -1,9 +1,9 @@
-defmodule FlightBooking1.Users.UserTest do
+defmodule FlightBooking.Users.UserTest do
   use ExUnit.Case
 
-  import FlightBooking1.Factory
+  import FlightBooking.Factory
 
-  alias FlightBooking1.Users.User
+  alias FlightBooking.Users.User
 
   describe "build/3" do
     test "when all parameters are valid, return the user" do

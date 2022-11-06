@@ -1,4 +1,4 @@
-defmodule FlightBooking1.Users.User do
+defmodule FlightBooking.Users.User do
   @keys [:name, :email, :cpf, :id]
   @enforce_keys [:name, :email, :cpf]
 

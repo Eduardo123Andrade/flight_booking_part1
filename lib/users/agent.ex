@@ -1,5 +1,5 @@
-defmodule FlightBooking1.Users.Agent do
-  alias FlightBooking1.Users.User
+defmodule FlightBooking.Users.Agent do
+  alias FlightBooking.Users.User
 
   def start_link(_initial_state \\ %{}) do
     Agent.start_link(fn -> %{} end, name: __MODULE__)

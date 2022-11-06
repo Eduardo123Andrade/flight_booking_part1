@@ -1,4 +1,4 @@
-defmodule FlightBooking1.Bookings.Booking do
+defmodule FlightBooking.Bookings.Booking do
   @keys [:local_origin, :local_destination, :user_id, :id, :complete_date]
   @enforce_keys [:local_origin, :local_destination, :user_id, :complete_date]
 

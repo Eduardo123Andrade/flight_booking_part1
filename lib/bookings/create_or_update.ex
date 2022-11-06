@@ -1,8 +1,8 @@
-defmodule FlightBooking1.Bookings.CreateOrUpdate do
-  alias FlightBooking1.Bookings
+defmodule FlightBooking.Bookings.CreateOrUpdate do
+  alias FlightBooking.Bookings
   alias Bookings.Agent, as: BookingAgent
   alias Bookings.Booking
-  alias FlightBooking1.Users.Agent, as: UserAgent
+  alias FlightBooking.Users.Agent, as: UserAgent
 
   def call(%Booking{
         user_id: user_id,

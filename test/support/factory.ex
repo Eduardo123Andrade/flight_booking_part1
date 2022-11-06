@@ -1,8 +1,8 @@
-defmodule FlightBooking1.Factory do
+defmodule FlightBooking.Factory do
   use ExMachina
 
-  alias FlightBooking1.Users.User
-  alias FlightBooking1.Bookings.Booking
+  alias FlightBooking.Users.User
+  alias FlightBooking.Bookings.Booking
 
   def user_factory do
     uuid = UUID.uuid4()

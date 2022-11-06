@@ -1,9 +1,9 @@
-defmodule FlightBooking1.Bookings.BookingTest do
+defmodule FlightBooking.Bookings.BookingTest do
   use ExUnit.Case
 
-  import FlightBooking1.Factory
+  import FlightBooking.Factory
 
-  alias FlightBooking1.Bookings.Booking
+  alias FlightBooking.Bookings.Booking
 
   describe "build/4" do
     test "when all parameters are valid, return the booking" do

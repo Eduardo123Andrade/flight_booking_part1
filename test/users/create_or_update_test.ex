@@ -1,10 +1,10 @@
-defmodule FlightBooking1.Users.CreateOrUpdateTest do
+defmodule FlightBooking.Users.CreateOrUpdateTest do
   use ExUnit.Case
 
-  import FlightBooking1.Factory
+  import FlightBooking.Factory
 
-  alias FlightBooking1.Users.CreateOrUpdate
-  alias FlightBooking1.Users.Agent, as: UserAgent
+  alias FlightBooking.Users.CreateOrUpdate
+  alias FlightBooking.Users.Agent, as: UserAgent
 
   describe "call/1" do
     test "when all params are valid, save the user" do

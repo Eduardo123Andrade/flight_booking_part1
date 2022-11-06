@@ -1,12 +1,12 @@
-defmodule FlightBooking1.Bookings.AgentTest do
+defmodule FlightBooking.Bookings.AgentTest do
   use ExUnit.Case
 
-  import FlightBooking1.Factory
+  import FlightBooking.Factory
 
-  # alias FlightBooking1.Bookings.CreateOrUpdate
-  alias FlightBooking1.Bookings.Agent, as: BookingAgent
+  # alias FlightBooking.Bookings.CreateOrUpdate
+  alias FlightBooking.Bookings.Agent, as: BookingAgent
 
-  # alias FlightBooking1.Users.Agent, as: UserAgent
+  # alias FlightBooking.Users.Agent, as: UserAgent
 
   describe "save/1" do
     test "saves the flight booking" do
