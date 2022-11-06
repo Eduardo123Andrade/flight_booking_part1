@@ -11,16 +11,15 @@ defmodule FlightBooking1.Bookings.Booking do
 
     compare = NaiveDateTime.compare(complete_date, local_date)
 
-    create_booking(
-      %Booking{
-        id: uuid,
-        user_id: user_id,
-        local_origin: local_origin,
-        local_destination: local_destination,
-        complete_date: complete_date
-      },
-      compare
-    )
+    booking = %Booking{
+      id: uuid,
+      user_id: user_id,
+      local_origin: local_origin,
+      local_destination: local_destination,
+      complete_date: complete_date
+    }
+
+    create_booking(booking, compare)
   end
 
   defp create_booking(%Booking{} = booking, compare) when compare == :gt,
